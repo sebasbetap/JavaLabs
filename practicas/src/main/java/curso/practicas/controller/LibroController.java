@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import curso.practicas.model.Libro;
 import curso.practicas.service.LibroService;
 import curso.practicas.utils.ResponseController;
 import curso.practicas.utils.ResponseObject;
@@ -57,7 +59,7 @@ public class LibroController extends ResponseController{
         }
     }
 
-    @DeleteMapping(value="/delete")
+    @DeleteMapping(value="/delete/{id}")
     public ResponseObject delete(@PathVariable int id){
         try {
             return setResponse(service.delete(id), 200, "");

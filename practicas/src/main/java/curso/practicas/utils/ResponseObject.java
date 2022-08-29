@@ -33,10 +33,10 @@ public class ResponseObject {
         this.messageError = messageError;
     }
 
-    public ResponseObject(Object data, int code, String messageError) {
+
+    public ResponseObject(Object data, int codeHttpStatus, String messageError) {
         this.data = data;
         this.codeHttpStatus = codeHttpStatus;
         this.messageError = messageError;
     }
-
 }

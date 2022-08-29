@@ -7,8 +7,16 @@ public class Libro {
     private String editorial;
     private int añoLanzamiento;
 
-    public Libro();
+    public Libro() {
+    }
 
+    public Libro(int id, String nombre, String autor, String editorial, int añoLanzamiento) {
+        this.id = id;
+        this.nombre = nombre;
+        this.autor = autor;
+        this.editorial = editorial;
+        this.añoLanzamiento = añoLanzamiento;
+    }
 
     public int getId() {
         return this.id;

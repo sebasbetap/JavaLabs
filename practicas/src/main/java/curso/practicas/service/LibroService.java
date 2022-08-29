@@ -14,19 +14,19 @@ public class LibroService {
 
     private void crearLista(){
         Libro java1 = new Libro();
-        java1.setId(id:1);
-        java1.setNombre(nombre: "Java el novelón");
-        java1.setAutor(autor: "La Nutria Malvada");
-        java1.setEditorial(editorial: "Planeta");
-        java1.setAñoLanzamiento(añoLanzamiento: 2022);
+        java1.setId(1);
+        java1.setNombre("Caballo de Troya");
+        java1.setAutor("J.J Benítez");
+        java1.setEditorial("Planeta");
+        java1.setAñoLanzamiento(1981);
         listaLibros.add(java1);
 
         Libro java2 = new Libro();
-        java2.setId(id: 2);
-        java2.setNombre(nombre: "Java para JavaScripteros");
-        java2.setAutor(autor: "J.S. Betancur");
-        java2.setEditorial(editorial: "Planeta");
-        java2.setAñoLanzamiento(añoLanzamiento: 2021);
+        java2.setId(2);
+        java2.setNombre("El Libro de Urantia");
+        java2.setAutor("Urantia Foundation");
+        java2.setEditorial("Urantia Foundation");
+        java2.setAñoLanzamiento(1935);
         listaLibros.add(java2);
 
     }
@@ -64,7 +64,7 @@ public class LibroService {
     public Libro update(Libro libro) throws Exception{
         try {
             for (Libro item : listaLibros) {
-                if (item.getId()) == libro.getId() {
+                if (item.getId() == libro.getId()) {
                     item.setNombre(libro.getNombre());
                     item.setAutor(libro.getAutor());
                     item.setEditorial(libro.getEditorial());
@@ -78,10 +78,10 @@ public class LibroService {
         }
     }
 
-    public List<Libro> delete(int id) throws Exception{
+    public List<Libro> delete(int idlibro) throws Exception{
         try {
             for (Libro item : listaLibros) {
-                if (item.getId()) == libro.getId() {
+                if (item.getId() == idlibro) {
                     listaLibros.remove(item);
                     return listaLibros;
                 }
@@ -91,6 +91,4 @@ public class LibroService {
             throw new Exception(e);
         }
     }
-
-
 }
